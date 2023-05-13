@@ -1,0 +1,9 @@
+.luka-vault-card-list {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  padding: 0 0 22px;
+}
