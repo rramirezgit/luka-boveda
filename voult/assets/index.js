@@ -20,3 +20,9 @@ export const imgVisa = `
     </defs>
     </svg>
     `;
+
+export const Btncheck = `
+    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.82446 6.36076L6.09245 10.6288L14.6435 2.09277" stroke="white" stroke-width="2.26219" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+`;

@@ -1,4 +1,5 @@
 import { LukaVoultCard } from "../Card/index.js";
+import { LukaCardNewCard } from "../newCard/index.js";
 import { ButonMore } from "./BotonMore/index.js";
 
 const cards = [
@@ -16,11 +17,17 @@ const cards = [
     },
 ]
 
+
+
 export const LukaVoultCardList = () => {
   return `    
-        <div class="luka-vault-card-list">
-            ${cards.map((card) => LukaVoultCard(card)).join("")}
-            ${ButonMore()}
+        <div class="luka-vault-container">
+            <div class="vault-container-mesage">Seleccione tarjeta</div>
+            <div class="luka-vault-card-list">
+                ${cards.map((card) => LukaVoultCard(card)).join("")}
+                ${ButonMore()}
+            </div>
+            ${LukaCardNewCard()}
         </div>
     `;
 };

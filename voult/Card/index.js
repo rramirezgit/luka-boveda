@@ -7,12 +7,15 @@ export const LukaVoultCard = ({
   haveInfo = true,
   haveDelete = true,
   haveImg = true,
-  color
+  color,
+  disablePointerEvents = false,
 }) => {
   return `    
-        <div class="luka-vault-card" id="card-${id}" style="background-color:${color}">
+        <div class="luka-vault-card" id="card-${id}" style="background-color:${color}${disablePointerEvents ? ';pointer-events: none' : ""}">
             <div class="vault-card-cicle"></div>
-            <div class="vault-card-edit">${haveEdit ? `${CardPencil}` : ""}</div>
+            <div class="vault-card-edit">${
+              haveEdit ? `${CardPencil}` : ""
+            }</div>
             <div class="vault-card-select">
             ${
               haveSelect
@@ -22,58 +25,65 @@ export const LukaVoultCard = ({
             }
             </div>
             <div class="vault-card-info-container">
-                ${haveInfo ? `
+                ${
+                  haveInfo
+                    ? `
                     <div class="vault-card-info">
                         <div class="vault-card-name">MI BOFA</div>
                         <div class="vault-card-number"> **** **** **** 1234</div> 
                     </div>
-                ` : ""}
+                `
+                    : ""
+                }
             </div>
-            <div class="vault-card-delete-cotainer">${haveDelete ? `
+            <div class="vault-card-delete-cotainer">${
+              haveDelete
+                ? `
                 <div class="vault-card-delete" id="deleteBtn-${id}">Eliminar</div>
-            ` : ""}</div>
-            <div class="vault-card-img-container">${haveImg ? `
+            `
+                : ""
+            }</div>
+            <div class="vault-card-img-container">${
+              haveImg
+                ? `
                 <div class="vault-card-img">
                     ${imgVisa}
                 </div>
-            ` : ""}</div>
+            `
+                : ""
+            }</div>
         </div>
     `;
-
 };
 
 const showDeleteBtn = (id, value) => {
-    const deleteBtn = document.querySelector(`#deleteBtn-${id}`);
-    deleteBtn.style.opacity = value;
+  const deleteBtn = document.querySelector(`#deleteBtn-${id}`);
+  deleteBtn.style.opacity = value;
 };
 
-const activeSelect = (id,value) => {
-    const select = document.querySelector(`#select-${id}`);
-    select.checked = value;
+const activeSelect = (id, value) => {
+  const select = document.querySelector(`#select-${id}`);
+  select.checked = value;
 };
-
 
 export const activeCardHover = () => {
-    const cards = document.querySelectorAll(".luka-vault-card");
-    
-    cards.forEach((card) => {
-        card.addEventListener("mouseover", (event) => {
-            card.style.transition = "all 0.3s ease-in-out";
-            card.style.filter = "brightness(1.1)";
-            card.style.transform = "scale(1.05)";
-            showDeleteBtn(event.currentTarget.id.split("-")[1], "1"); 
-            activeSelect(event.currentTarget.id.split("-")[1], true)
-           });
-    
-        card.addEventListener("mouseout", (event) => {
-            card.style.transition = "all 0.3s ease-in-out";
-            card.style.filter = "brightness(1)";
-            card.style.transform = "scale(1)";
-            showDeleteBtn(event.currentTarget.id.split("-")[1], "0");  
-            activeSelect(event.currentTarget.id.split("-")[1], false)
-        });
+  const cards = document.querySelectorAll(".luka-vault-card");
+
+  cards.forEach(card => {
+    card.addEventListener("mouseover", event => {
+      card.style.transition = "all 0.3s ease-in-out";
+      card.style.filter = "brightness(1.1)";
+      card.style.transform = "scale(1.05)";
+      showDeleteBtn(event.currentTarget.id.split("-")[1], "1");
+      activeSelect(event.currentTarget.id.split("-")[1], true);
     });
+
+    card.addEventListener("mouseout", event => {
+      card.style.transition = "all 0.3s ease-in-out";
+      card.style.filter = "brightness(1)";
+      card.style.transform = "scale(1)";
+      showDeleteBtn(event.currentTarget.id.split("-")[1], "0");
+      activeSelect(event.currentTarget.id.split("-")[1], false);
+    });
+  });
 };
-
-
-

@@ -6,10 +6,19 @@
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  margin: 10px 10px;
 }
 
 .vault-container-mesage {
   margin-top: 22px;
   padding: 0px 22px;
+}
+
+.luka-vault-list-form {
+  width: 100%;
+  max-width: 959px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: solid 1px #cfd4d9;
+  border-radius: 8px;
 }

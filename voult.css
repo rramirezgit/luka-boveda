@@ -1,6 +1,10 @@
-@import url("/voult/voultcontainer.css");
+@import url("/voult/VaultContainer/voultcontainer.css");
 @import url("/voult/CardList/Cardlist.css");
 @import url("/voult/Card/card.css");
+@import url("/voult/CardList/BotonMore/botonMore.css");
+@import url("/voult/Form/form.css");
+@import url("/voult/newCard/style.css");
+@import url("/voult/newCard/RadiosButonsColor/radios.css");
 
 #luka-voult {
   width: 100%;

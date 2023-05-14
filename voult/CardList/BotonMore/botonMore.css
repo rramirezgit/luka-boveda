@@ -1,0 +1,39 @@
+.voult-hidden-opacity {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.voult-visible-opacity {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.voult-hidden {
+  display: none;
+}
+
+.voult-container-new {
+  width: 300px;
+  height: 408px;
+  transition: all 0.5s;
+  border-radius: 8px 0px 0px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.voult-visible-form {
+  display: block !important;
+}
+
+.voult-opacity-form {
+  transition: opacity 0.5s;
+  opacity: 1 !important;
+}
+
+.luka-vault-new-card-show {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

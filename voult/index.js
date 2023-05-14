@@ -1,4 +1,5 @@
 import { activeCardHover } from "./Card/index.js";
+import { handleClickMore } from "./CardList/BotonMore/index.js";
 import { LukavoultComponent } from "./VaultContainer/index.js";
 
 const lukaVoult = {}
@@ -9,7 +10,7 @@ lukaVoult.init = ({id_rendender}) => {
     /* se activan los Mouse hover de las tarjetas */
     activeCardHover();
     /* funcionalidad de boton agregar mas tarjetas */
-    handleClickMore();    
+    handleClickMore(); 
 }
 
 

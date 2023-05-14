@@ -1,0 +1,53 @@
+.radio-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 39.8px;
+}
+.vault-radios {
+  display: none;
+}
+
+.vault-radio-label {
+  display: inline-block;
+  width: 31.15px;
+  height: 31.15px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.vault-radio-label::before {
+  content: "";
+  display: block;
+  width: 37.9px;
+  height: 37.9px;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.vault-radios:checked + .vault-radio-label::before {
+  opacity: 1;
+}
+
+.symbol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.vault-radios:checked + .vault-radio-label .symbol {
+  opacity: 1;
+}

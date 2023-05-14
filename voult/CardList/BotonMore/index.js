@@ -1,3 +1,5 @@
+import { handleClickRadio } from "../../newCard/RadiosButonsColor/index.js";
+
 export const ButonMore = () => {
     return `
           <div class="luka-vault-card-more">
@@ -10,6 +12,35 @@ export const ButonMore = () => {
   };
 
 export const handleClickMore = () => {
+    const newCard = document.querySelector(".luka-vault-new-card");
+    const cardListContainer = document.querySelector(".luka-vault-container");
+    const mesage = document.querySelector(".vault-container-mesage");
+    const cardList = document.querySelector(".luka-vault-card-list");
+    const formulario = document.querySelector(".luka-vault-form");
     const moreBtn = document.querySelector(".luka-vault-card-more");
-    
+
+    moreBtn.addEventListener("click", () => {
+        mesage.classList.add("voult-hidden-opacity");
+        cardList.classList.add("voult-hidden-opacity");
+        setTimeout(() => {
+            mesage.classList.add("voult-hidden");
+            cardList.classList.add("voult-hidden");
+            setTimeout(() => {
+                cardListContainer.classList.add("voult-container-new");
+                setTimeout(() => {
+                        formulario.classList.add("voult-visible-form");
+                        formulario.classList.add("voult-opacity-form");
+                        newCard.classList.add("luka-vault-new-card-show");
+                        setTimeout(() => {
+                            newCard.classList.add("voult-opacity-form");
+                        }, 50);
+                    }, 250);
+            } , 100);
+        }, 100);
+    });
+
+
+    setTimeout(() => {
+        handleClickRadio()
+    }, 1000);
 }
