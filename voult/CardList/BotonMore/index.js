@@ -1,4 +1,6 @@
+import { handleChangeCardName } from "../../newCard/InputCardName/index.js";
 import { handleClickRadio } from "../../newCard/RadiosButonsColor/index.js";
+import { handleClickNewCard } from "../../newCard/index.js";
 
 export const ButonMore = () => {
     return `
@@ -16,7 +18,7 @@ export const handleClickMore = () => {
     const cardListContainer = document.querySelector(".luka-vault-container");
     const mesage = document.querySelector(".vault-container-mesage");
     const cardList = document.querySelector(".luka-vault-card-list");
-    const formulario = document.querySelector(".luka-vault-form");
+    const formulario = document.querySelector(".luka-vault-form-container");
     const moreBtn = document.querySelector(".luka-vault-card-more");
 
     moreBtn.addEventListener("click", () => {
@@ -37,10 +39,12 @@ export const handleClickMore = () => {
                     }, 250);
             } , 100);
         }, 100);
+
+
+        setTimeout(() => {
+            handleClickRadio()
+            handleChangeCardName()
+            handleClickNewCard()
+        }, 1000);
     });
-
-
-    setTimeout(() => {
-        handleClickRadio()
-    }, 1000);
 }

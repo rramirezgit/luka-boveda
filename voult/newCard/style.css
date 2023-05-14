@@ -5,4 +5,74 @@
   display: none;
   border-radius: 0px 8px 8px 0px;
   opacity: 0;
+  position: relative;
+}
+
+.vault-new-card-title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 42.8px;
+  position: absolute;
+  top: 240px;
+}
+
+.vault-new-card-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 14px;
+  text-decoration-line: underline;
+  color: #0878ff;
+  font-stretch: 108;
+}
+
+.vault-new-card-img {
+  width: 20px;
+  height: 20px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+#inputs-edit-vault {
+  display: none;
+  width: 100%;
+}
+
+.show-input {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* transition: all 1s; */
+  position: relative;
+  bottom: -75px;
+}
+
+.new-card-container {
+  width: 100%;
+  position: absolute;
+  top: 100px;
+  transition: all 0.5s;
+}
+
+.content-options-vault {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btns-options-vault {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 14px;
+  color: #0878ff;
+  font-stretch: 108;
+  cursor: pointer;
 }

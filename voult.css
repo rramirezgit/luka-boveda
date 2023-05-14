@@ -5,6 +5,7 @@
 @import url("/voult/Form/form.css");
 @import url("/voult/newCard/style.css");
 @import url("/voult/newCard/RadiosButonsColor/radios.css");
+@import url("/voult/newCard/InputCardName/style.css");
 
 #luka-voult {
   width: 100%;

@@ -29,8 +29,8 @@ export const LukaVoultCard = ({
                   haveInfo
                     ? `
                     <div class="vault-card-info">
-                        <div class="vault-card-name">MI BOFA</div>
-                        <div class="vault-card-number"> **** **** **** 1234</div> 
+                        <div class="vault-card-name" id="card-name-${id}">MI BOFA</div>
+                        <div class="vault-card-number" id="card-number-${id}"> **** **** **** 1234</div> 
                     </div>
                 `
                     : ""
