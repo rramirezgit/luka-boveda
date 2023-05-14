@@ -1,7 +1,7 @@
 export const InputCardName = () => {
     return `
         <div class="vault-new-card-input-container">
-            <input type="text" placeholder="Nombre de la tarjeta" class="vault-input" maxlength="18"/>
+            <input type="text" placeholder="Ninck name" class="vault-input" maxlength="18"/>
         </div>
     `;
 }

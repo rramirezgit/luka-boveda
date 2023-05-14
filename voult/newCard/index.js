@@ -39,11 +39,9 @@ export const handleClickNewCard = () => {
   link.addEventListener("click", () => {
   card.style.transform = "translateY(-20px)";  
   card.style.position = "absolute";
-    setTimeout(() => {
-      link.style.display = "none";
+  link.style.display = "none";
       setTimeout(() => {
         inputs.classList.add("show-input");
-      }, 100);
-    }, 300);
+      }, 200);
   });
 }
