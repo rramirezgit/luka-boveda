@@ -1,3 +1,5 @@
+import { rotateCard, rotateCardBack } from "../../Card/index.js";
+import { handleChangeCvv, handleChangeNumber } from "../../Form/index.js";
 import { handleChangeCardName } from "../../newCard/InputCardName/index.js";
 import { handleClickRadio } from "../../newCard/RadiosButonsColor/index.js";
 import { handleClickNewCard } from "../../newCard/index.js";
@@ -12,6 +14,32 @@ export const ButonMore = () => {
           </div>
       `;
   };
+
+  export const handleClickBack = () => {
+    const newCard = document.querySelector(".luka-vault-new-card");
+    const cardListContainer = document.querySelector(".luka-vault-container");
+    const mesage = document.querySelector(".vault-container-mesage");
+    const cardList = document.querySelector(".luka-vault-card-list");
+    const formulario = document.querySelector(".luka-vault-form-container");
+    const moreBtn = document.querySelector(".btn-back-vault");
+    
+    moreBtn.addEventListener("click", () => {
+        formulario.classList.remove("voult-opacity-form");
+        setTimeout(() => {
+            formulario.classList.remove("voult-visible-form");
+            newCard.classList.remove("luka-vault-new-card-show");
+            cardListContainer.classList.remove("voult-container-new");
+            setTimeout(() => {
+                cardList.classList.remove("voult-hidden");
+                mesage.classList.remove("voult-hidden-opacity");
+                setTimeout(() => {
+                    cardList.classList.remove("voult-hidden-opacity");
+                    mesage.classList.remove("voult-hidden");
+                }, 100);
+            }, 50);
+        }, 250);
+    });
+}
 
 export const handleClickMore = () => {
     const newCard = document.querySelector(".luka-vault-new-card");
@@ -45,6 +73,15 @@ export const handleClickMore = () => {
             handleClickRadio()
             handleChangeCardName()
             handleClickNewCard()
+            handleClickBack()
+            rotateCard()
+            rotateCardBack()
+            handleChangeCvv()
+            handleChangeNumber()
         }, 1000);
     });
 }
+
+/* funcion que hace todo lo cantrario que handleClickMore */
+
+

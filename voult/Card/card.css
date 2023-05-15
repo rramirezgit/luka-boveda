@@ -9,6 +9,28 @@
   overflow: hidden;
   position: relative;
 }
+.luka-vault-card-back {
+  background-color: rgba(105, 173, 255, 1);
+  width: 210.49px;
+  height: 133.2px;
+  border-radius: 11.26px;
+  overflow: hidden;
+  position: relative;
+}
+
+.vault-card-banda {
+  position: absolute;
+  width: 210px;
+  height: 33px;
+  top: 15px;
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.vault-card-cvv-back {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+}
 
 .luka-vault-card-more {
   background-color: #ffffff;
@@ -98,7 +120,8 @@
 
 .vault-card-name,
 .vault-card-number,
-.vault-card-delete {
+.vault-card-delete,
+.vault-card-cvv-back {
   font-family: Inter;
   font-style: bold;
   font-size: 14.26px;
@@ -122,4 +145,25 @@
   padding: 0px 12px;
   display: flex;
   justify-content: flex-end;
+}
+
+.container-card-front-back {
+  width: 100%;
+  position: relative;
+  width: 210.49px;
+  height: 133.2px;
+  perspective: 800px;
+}
+
+.luka-vault-card-back,
+.luka-vault-card {
+  position: absolute;
+  transform-style: preserve-3d;
+  background-color: #eaeaea;
+  transition: transform 0.5s;
+}
+
+.luka-vault-card-back {
+  display: none;
+  transform: rotateY(180deg);
 }

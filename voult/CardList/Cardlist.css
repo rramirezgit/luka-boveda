@@ -6,4 +6,5 @@
   align-items: center;
   gap: 28px;
   padding: 0 0 22px;
+  transition: all 0.5s;
 }

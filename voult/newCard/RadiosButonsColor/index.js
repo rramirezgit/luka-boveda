@@ -44,10 +44,12 @@ export const RadiosButonsColor = () => {
 export const handleClickRadio = e => {
     const radioChecked = document.querySelectorAll(".vault-radios");
     const card = document.querySelector("#card-newCard");
+    const cardBack = document.querySelector("#card-back-newCard");
     
     radioChecked.forEach(radio => {
         radio.addEventListener("click", () => {
             card.style.backgroundColor = radio.nextElementSibling.style.backgroundColor;
+            cardBack.style.backgroundColor = radio.nextElementSibling.style.backgroundColor;
         })
     })
 

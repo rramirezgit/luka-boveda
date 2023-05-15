@@ -11,6 +11,7 @@ export const LukaVoultCard = ({
   disablePointerEvents = false,
 }) => {
   return `    
+      <div class="container-card-front-back">
         <div class="luka-vault-card" id="card-${id}" style="background-color:${color}${disablePointerEvents ? ';pointer-events: none' : ""}">
             <div class="vault-card-cicle"></div>
             <div class="vault-card-edit">${
@@ -53,8 +54,29 @@ export const LukaVoultCard = ({
                 : ""
             }</div>
         </div>
+        ${cardBack({
+          id,
+          color,
+          disablePointerEvents
+        })}
+      </div>
+
     `;
 };
+
+const cardBack = ({
+  id,
+  color,
+  disablePointerEvents
+}) =>{
+
+  return  `
+    <div class="luka-vault-card-back" id="card-back-${id}" style="background-color:${color}${disablePointerEvents ? ';pointer-events: none' : ""}">
+        <div class="vault-card-banda"></div>
+        <div class="vault-card-cvv-back" id="vault-card-cvv-back-${id}">...</div>
+    </div>
+    `
+}
 
 const showDeleteBtn = (id, value) => {
   const deleteBtn = document.querySelector(`#deleteBtn-${id}`);
@@ -87,3 +109,42 @@ export const activeCardHover = () => {
     });
   });
 };
+
+let rotada =  false;
+
+export const rotateCard = () => {
+  const inputcvv = document.querySelector('#vault-form-cvv');
+  const box1 = document.querySelector('#card-newCard');
+  const box2 = document.querySelector('#card-back-newCard');
+  inputcvv.addEventListener('focusin', () => {
+    if (rotada) return;
+    box1.style.transform = 'rotateY(180deg)';
+    setTimeout(() => {
+      box1.style.display = 'none';
+      box2.style.display = 'block';
+    }, 208);
+    setTimeout(() => {
+      box2.style.transform = 'rotateY(0deg)';
+    }, 205);
+    rotada = true;
+  });
+} 
+
+export const rotateCardBack = () => {
+  const inputcvv = document.querySelector('#vault-form-cvv');
+  const box1 = document.querySelector('#card-newCard');
+  const box2 = document.querySelector('#card-back-newCard');
+
+
+  inputcvv.addEventListener('focusout', () => {
+    if(rotada){
+      rotada = false;
+      box1.style.transform = 'rotateY(0deg)';
+      box2.style.transform = 'rotateY(180deg)';
+      setTimeout(() => {
+        box2.style.display = 'none';
+        box1.style.display = 'block';
+      }, 208);
+    } 
+  });
+}

@@ -11,6 +11,7 @@ lukaVoult.init = ({id_rendender}) => {
     activeCardHover();
     /* funcionalidad de boton agregar mas tarjetas */
     handleClickMore(); 
+
     
 }
 
