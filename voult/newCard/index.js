@@ -10,7 +10,9 @@ export const LukaCardNewCard = () => {
             <div class="new-card-container">
               ${LukaVoultCard({
                 id: "newCard",
-                color: "rgba(105, 173, 255, 1)",
+                color: "#0878FF",
+                name: "....",
+                numbers: "****",
                 disablePointerEvents: true,
                 haveEdit: false,
                 haveSelect: false,

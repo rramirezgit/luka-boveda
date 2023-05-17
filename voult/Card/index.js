@@ -8,6 +8,8 @@ export const LukaVoultCard = ({
   haveDelete = true,
   haveImg = true,
   color,
+  name = "MI BOFA",
+  numbers = "1234",
   disablePointerEvents = false,
 }) => {
   return `    
@@ -30,8 +32,8 @@ export const LukaVoultCard = ({
                   haveInfo
                     ? `
                     <div class="vault-card-info">
-                        <div class="vault-card-name" id="card-name-${id}">MI BOFA</div>
-                        <div class="vault-card-number" id="card-number-${id}"> **** **** **** 1234</div> 
+                        <div class="vault-card-name" id="card-name-${id}">${name}</div>
+                        <div class="vault-card-number" id="card-number-${id}"> **** **** **** ${numbers}</div> 
                     </div>
                 `
                     : ""

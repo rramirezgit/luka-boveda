@@ -21,7 +21,7 @@ export const handleChangeCardName = () => {
             }
             cardName.innerHTML = event.target.value;
         }else {
-            cardName.innerHTML = 'MI BOFA';
+            cardName.innerHTML = '....';
         }
     });
 }
